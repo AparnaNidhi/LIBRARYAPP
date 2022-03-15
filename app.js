@@ -41,7 +41,6 @@ app.set('views',__dirname+"/src/views");
 
 app.use('/books',booksRouter);
 app.use('/authors',authorsRouter);
-app.use('/admin',adminRouter);
 app.use('/login',loginRouter);
 app.use('/signup',SignupRouter);
 app.use('/index',indexRouter); 
