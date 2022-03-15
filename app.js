@@ -1,9 +1,7 @@
 const express=require('express');
 const app=express();
 const nav=[
-    {
-        link:'/',name:'Home'
-    },
+    
     {
         link:'/login',name:'Login'
     },
@@ -33,7 +31,7 @@ const indexRouter=require('./src/routes/indexroute')(nav)
 
 
 app.use(express.urlencoded({extended:true}));
-app.use(express.static(__dirname+'/public'));
+app.use(express.static(__dirname+"/public"));
 app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); 
 app.use('/js', express.static(__dirname + '/node_modules/jquery/dist'));
 app.use('/js', express.static(__dirname + '/node_modules/popper.js/dist'));
