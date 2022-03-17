@@ -14,5 +14,5 @@ const signupSchema=new schema({
 });
 
 //model creation
-var signupdata=mongoose.model('signupdata',signupSchema);
-module.exports=signupdata;
+var signupData=mongoose.model('signupData',signupSchema);
+module.exports=signupData;

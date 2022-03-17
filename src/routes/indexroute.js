@@ -1,13 +1,9 @@
-const express=require('express');
+const express = require('express');
+
 const indexRouter=express.Router();
-function router(nav){
-    indexRouter.get('/',function(req,res){
-        res.render('index',{
-            nav,
-            title:'Library'
-        });
-    })  
-    return indexRouter;
-    
-}
-module.exports=router;
+
+
+indexRouter.get('/',function(req,res){
+    res.render("index",{nav:[{link:'/',name:'Home'},{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/addbook',name:'Add Book'},{link:'/authors/add',name:'Add Author'}]});
+})
+module.exports = indexRouter;

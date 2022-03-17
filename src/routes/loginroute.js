@@ -1,47 +1,33 @@
-const express=require('express');
-const { redirect } = require('express/lib/response');
-const loginRouter=express.Router();
-const Signupdata=require('../model/signupdata');
+const express = require('express');
+const loginRouter =express.Router();
+const SignupData = require('../model/signupdata');
 
-function router(nav){
-    loginRouter.get('/',function(req,res){
-        res.render('login',{
-            nav,
-            title:'Library',
-            redirect:'/index'
-        })
+loginRouter.get('/',function(req,res){
+    res.render("login",{nav:[{link:'/',name:'Home'},{link:'/login',name:'Login'},{link:'/signup',name:'Sign Up'}],redirect:'/index'});
+})
+
+loginRouter.post('/redirect',function(req,res){
+
+    const name = req.body.name;
+    const pwd = req.body.pwd;
+    
+    console.log("In login router");
+    console.log(name);
+    console.log(pwd);
+
+    SignupData.findOne({name:name,pwd:pwd})
+    .then(function(data){
+        if(data==null){
+            res.render("login",{nav:[{link:'/',name:'Home'},{link:'/login',name:'Login'},{link:'/signup',name:'Sign Up'}],redirect:'/index'});
+        }
+        else{
+            res.render("signup",{nav:[{link:'/',name:'Home'},{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/addbook',name:'Add Book'},{link:'/authors/add',name:'Add Author'}]});
+        }
+
+        console.log(data);
     })
-    loginRouter.post('/redirect',function(req,res){
 
-        const name = req.body.name;
-        const pwd = req.body.pwd;
-        
-        console.log("login router");
-        console.log(name);
-        console.log(pwd);
     
-        RegistrationData.findOne({name:name,pwd:pwd})
-        .then(function(data){
-            if(data==null){
-                res.render("login",{
-                    nav,
-                    title:'Library',
-                    redirect:'/index'
-                });
-            }
-            else{
-                res.render("index",{
-                    nav,
-                    title:'Library'
-                });
-            }
-    
-            console.log(data);
-        })
-    
-        
-    })
-    return loginRouter;   
-}
+})
 
-module.exports=router;
+module.exports = loginRouter;
