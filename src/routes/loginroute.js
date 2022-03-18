@@ -21,7 +21,7 @@ loginRouter.post('/redirect',function(req,res){
             res.render("login",{nav:[{link:'/',name:'Home'},{link:'/login',name:'Login'},{link:'/signup',name:'Sign Up'}],redirect:'/index'});
         }
         else{
-            res.render("signup",{nav:[{link:'/',name:'Home'},{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/addbook',name:'Add Book'},{link:'/authors/add',name:'Add Author'}]});
+            res.render("index",{nav:[{link:'/',name:'Home'},{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/addbook',name:'Add Book'},{link:'/authors/add',name:'Add Author'}]});
         }
 
         console.log(data);

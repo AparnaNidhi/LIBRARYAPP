@@ -23,7 +23,6 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand">Home</a>
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
@@ -91,112 +90,105 @@
           
           
           
-          <div class="form-group col-md-6">
-          <form method="POST" action="/authors/addauthor" >
-            <div class="form-row">
-                <div class="form-group col-md-4" style="text-align: right;">
-                    <label for="title">Title:</label>
+                    <form method="POST" action="/authors/addauthor">
+                        <div class="form-row">
+                            <div class="form-group col-md-4" style="text-align: right;">
+                                <label for="name">Name:</label>
+                            </div>
+                            <div class="form-group col-md-8">
+                                <input type="text" class="form-control" id="title" name="title">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group col-md-4"  style="text-align: right;" >
+                                <label for="author">Description:</label>
+                            </div>
+                            <div class="form-group col-md-8">
+                                <input type="textarea" class="form-control" id="about" name="about">
+                            </div>
+                        </div>
+                        
+                        <div  class="form-row">
+                            
+                            <div class="form-group col-md-4" style="text-align: right;" >
+                               <label for="image">Image:</label>
+                            </div>
+                            <div class="form-group col-md-8">
+                                <input type="file"  id="image" accept="image/*,.pdf" name="image">
+                            </div>
+                          
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-4"  style="text-align: right;">
+                            
+                            </div>
+                            <div class="form-group col-md-8"  style="text-align: right;">
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" >Add Author</button>  
+                              </div>
+                            </div>
+                            
+                        </form> 
+                        </div>
+                          
+                          <hr>
+                          
+                        
+                         
+                        
+                          
+                        </div>
+                      </div>
+                                                                                                       
+                                                                  
+                                                                      
+                     </div><!--/col-12-->
+                  </div>
                 </div>
-                <div class="form-group col-md-8">
-                    <input type="text" class="form-control" id="title" name="title">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-4"  style="text-align: right;" >
-                    <label for="author">Author:</label>
-                </div>
-                <div class="form-group col-md-8">
-                    <input type="text" class="form-control" id="author" name="author">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-4"  style="text-align: right;">
-                    <label for="genre">Genre:</label>
-                </div>
-                <div class="form-group col-md-8">
-                    <input type="text" class="form-control" id="genre"  name="genre">
-                </div>
-            </div>
-            <div  class="form-row">
+                                                                
+                                                                                                
+                <hr>
                 
-                <div class="form-group col-md-4" style="text-align: right;" >
-                   <label for="image">Image:</label>
+                <div class="container" id="footer">
+                  <div class="row">
+                    <div class="col col-sm-12">
+                      
+                      <h1>Follow Us</h1>
+                      <div class="btn-group">
+                       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+                     <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+                     <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+                      </div>
+                      
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group col-md-8">
-                    <input type="file"  id="image" accept="image/*,.pdf" name="image">
-                </div>
-              
-            </div>
-
-            <div class="form-row">
-                <div class="form-group col-md-4"  style="text-align: right;">
                 
-                </div>
-                <div class="form-group col-md-8"  style="text-align: right;">
-                    <button type="submit" class="btn btn-primary pull-right btnNext" >Add Book</button>  
-                </div>
-            </div>
-            
-        </form> 
-        </div>
-          
-          <hr>
-          
-        
-         
-        
-          
-        </div>
-      </div>
-                                                                                       
-	                                                
-                                                      
-   	</div><!--/col-12-->
-  </div>
-</div>
-                                                
-                                                                                
-<hr>
-
-<div class="container" id="footer">
-  <div class="row">
-    <div class="col col-sm-12">
-      
-      <h1>Follow Us</h1>
-      <div class="btn-group">
-       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
-	   <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
-	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-<hr>
-
-<hr>
-
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <ul class="list-inline">
-          <li><i class="icon-facebook icon-2x"></i></li>
-          <li><i class="icon-twitter icon-2x"></i></li>
-          <li><i class="icon-google-plus icon-2x"></i></li>
-          <li><i class="icon-pinterest icon-2x"></i></li>
-        </ul>
-        
-      </div>
-      <div class="col-sm-6">
-          <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
-      </div>
-    </div>
-  </div>
-</footer>
-	<!-- script references -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-	</body>
-</html>
+                <hr>
+                
+                <hr>
+                
+                <footer>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <ul class="list-inline">
+                          <li><i class="icon-facebook icon-2x"></i></li>
+                          <li><i class="icon-twitter icon-2x"></i></li>
+                          <li><i class="icon-google-plus icon-2x"></i></li>
+                          <li><i class="icon-pinterest icon-2x"></i></li>
+                        </ul>
+                        
+                      </div>
+                      <div class="col-sm-6">
+                          <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+                      </div>
+                    </div>
+                  </div>
+                </footer>
+                  <!-- script references -->
+                    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+                    <script src="js/bootstrap.min.js"></script>
+                  </body>
+                </html>                          

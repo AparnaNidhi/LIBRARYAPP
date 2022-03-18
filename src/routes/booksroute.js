@@ -7,8 +7,7 @@ booksRouter.get('/',function(req,res){
 
     BookData.find()
     .then(function(books){
-        res.render("books",{nav:[{link:'/',name:'Home'},{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/addbook',name:'Add Book'},{link:'/authors/add',name:'Add Author'},
-        {link:'/about',name:'About Us'}],books});
+        res.render("books",{nav:[{link:'/',name:'Home'},{link:'/books',name:'Books'},{link:'/authors',name:'Authors'},{link:'/addbook',name:'Add Book'},{link:'/authors/add',name:'Add Author'}],books});
     })
      
   })

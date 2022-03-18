@@ -34,9 +34,8 @@ authorsRouter.post('/addauthor',function(req,res){
   
    //for POST
      var item={
-      name: req.body.name,
-      genre:req.body.genre,
-      desc:req.body.desc,
+      title: req.body.title,
+      about:req.body.about,
       image:req.body.image
     }
    
@@ -59,9 +58,8 @@ authorsRouter.post("/update",function(req,res){
  }
 
   var item = {
-      name: req.body.name,
-      desc:req.body.desc,
-      genre:req.body.genre,
+      title:req.body.title,
+      about:req.body.about,
       image: img
   }
 
