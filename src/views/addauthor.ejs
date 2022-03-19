@@ -6,12 +6,12 @@
 		<title>LIBRARY</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="/css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -50,7 +50,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-7">
-        <h1>Add Book
+        <h1>Add Author
           <p class="lead"></p>
         </h1>
       </div>
@@ -89,7 +89,7 @@
           
           
           
-          
+          <div class="form-group col-md-6">
                     <form method="POST" action="/authors/addauthor">
                         <div class="form-row">
                             <div class="form-group col-md-4" style="text-align: right;">
@@ -125,11 +125,12 @@
                             
                             </div>
                             <div class="form-group col-md-8"  style="text-align: right;">
-                                <button type="submit" class="btn btn-primary btn-lg btn-block" >Add Author</button>  
+                                <button type="submit" class="btn btn-primary pull-right btnNext" >Add Author</button>  
                               </div>
                             </div>
                             
-                        </form> 
+                        </form>
+                        </div>
                         </div>
                           
                           <hr>
@@ -189,6 +190,6 @@
                 </footer>
                   <!-- script references -->
                     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-                    <script src="js/bootstrap.min.js"></script>
+                    <script src="/js/bootstrap.min.js"></script>
                   </body>
                 </html>                          

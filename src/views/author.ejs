@@ -113,7 +113,55 @@
           
         
           <!--/stories-->
-          
+          <div class="form-group col-md-6">
+            
+                  <div class="h3 text-center" style="font-style: italic; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Author Details</div>
+                  <br>
+                  <form id="changeform" method="POST" action="" onsubmit="this.action=getAction();">
+                      <div class="form-row">
+                          <div class="form-group col-md-4" style="text-align: right;">
+                              <label for="title">Name:</label>
+                          </div>
+                          <div class="form-group col-md-8">
+                              <input type="text" class= "form-control" id="title" name="title" value="<%=author.title%>" disabled>
+                          </div>
+                      </div>
+                     
+                      <div class="form-row">
+                          <div class="form-group col-md-4"  style="text-align: right;">
+                              <label for="genre">Description:</label>
+                          </div>
+                          <div class="form-group col-md-8">
+                              <input type="text" class="form-control" id="about"  name="about" value="<%=author.about%>" disabled>
+                          </div>
+                      </div>
+                      <!--<input type="text" class="form-control" id="imgdb"  name="imgdb" value="homeintheworld.jpg" hidden>
+                      
+                      <div  id="imgdiv" class="form-row" hidden>
+                          <div class="form-group col-md-4" style="text-align: right;" >
+                              <label for="image">Image:</label>
+                          </div>
+                          <div class="form-group col-md-8" >
+                              <input type="file"  id="image" accept="image/*,.pdf" name="image" >
+                          </div>
+                      </div>-->
+    
+                      <div class="form-row">
+                          <div class="form-group col-md-2"  style="text-align: right;" name="id" hidden>
+                            <input type="text" class="form-control" id="objectid"  name="objectid" value="<%=author._id%>">
+                            
+                          </div>
+                          <div class="form-group col-md-5"  style="text-align: right;">
+                              <button type="button" class="btn btn-primary btn-lg btn-block" onclick="changeView('edit')" id="edit" > Edit</button>  
+                          </div>
+                          <div class="form-group col-md-5"  style="text-align: right;">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block" id="save">Delete</button>  
+                        </div>
+                      </div>
+                 </form>          
+            </div>
+                 
+         
           
           <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
         
@@ -161,62 +209,7 @@
         </ul>
         
       </div>
-      <div class="form-group col-md-6">
-        <div class="h3 text-center" style="font-style: italic; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Author Details</div>
-          <br>
-          <form id="changeform" method="POST" action="" onsubmit="this.action=getAction();">
-              <div class="form-row">
-                  <div class="form-group col-md-4" style="text-align: right;">
-                      <label for="title">Name:</label>
-                  </div>
-                  <div class="form-group col-md-8">
-                      <input type="text" class= "form-control" id="name" name="name" value="<%=author.name%>" disabled>
-                  </div>
-              </div>
-              <div class="form-row">
-                  <div class="form-group col-md-4"  style="text-align: right;" >
-                      <label for="author">Genre:</label>
-                  </div>
-                  <div class="form-group col-md-8">
-                      <input type="text" class="form-control" id="genre" name="genre" value="<%=author.genre%>" disabled>
-                  </div>
-              </div>
-              <div class="form-row">
-                  <div class="form-group col-md-4"  style="text-align: right;">
-                      <label for="genre">Description:</label>
-                  </div>
-                  <div class="form-group col-md-8">
-                      <input type="text" class="form-control" id="desc"  name="desc" value="<%=author.desc%>" disabled>
-                  </div>
-              </div>
-              <input type="text" class="form-control" id="imgdb"  name="imgdb" value="<%=author.image%>" hidden>
-              
-              <div  id="imgdiv" class="form-row" hidden>
-                  <div class="form-group col-md-4" style="text-align: right;" >
-                      <label for="image">Image:</label>
-                  </div>
-                  <div class="form-group col-md-8" >
-                      <input type="file"  id="image" accept="image/*,.pdf" name="image" >
-                  </div>
-              </div>
-
-              <div class="form-row">
-                  <div class="form-group col-md-2"  style="text-align: right;" name="id" >
-                    <input type="text" class="form-control" id="objectid"  name="objectid" value="<%=author._id%>" hidden>
-                    
-                  </div>
-                  <div class="form-group col-md-5"  style="text-align: right;">
-                      <button type="button" class="btn btn-primary btn-lg btn-block" onclick="changeView('edit')" id="edit" > Edit</button>  
-                  </div>
-                  <div class="form-group col-md-5"  style="text-align: right;">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" id="save">Delete</button>  
-                </div>
-              </div>
-         </form>          
-    </div>
-  </div>
-
-</div>
+      
       <div class="col-sm-6">
           <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
       </div>
@@ -226,5 +219,6 @@
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+    <script src="/js/author.js"></script>
 	</body>
 </html>

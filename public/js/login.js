@@ -12,7 +12,7 @@ function validate(){
         return true;
     }
 
-   }
+}
 
 
     
