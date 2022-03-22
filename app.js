@@ -25,7 +25,7 @@ app.use('/login',loginRouter);
 app.use('/signup',SignupRouter);
 app.use('/index',indexRouter); 
 app.use('/addbook',adminRouter);
-// app.use("/authors/add",authorsRouter);
+app.use("/authors/add",authorsRouter);
 app.use("/authors/addauthor",authorsRouter);
 
 app.get('/',function(req,res){
