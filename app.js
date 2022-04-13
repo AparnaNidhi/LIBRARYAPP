@@ -1,6 +1,6 @@
 const express=require('express');
 const app=express();
-
+const PORT=process.env.PORT || 5000;
 const authorsRouter=require('./src/routes/authorsroute');
 const booksRouter=require('./src/routes/booksroute');
 const adminRouter=require('./src/routes/adminroute');
@@ -31,7 +31,9 @@ app.use("/authors/addauthor",authorsRouter);
 app.get('/',function(req,res){
     res.render("home",{nav:[{link:'/',name:'Home'},{link:'/login',name:'Login'},{link:'/signup',name:'Sign Up'}]});
 });
-
-app.listen(5000);
+app.listen(PORT,()=>{
+    console.log("Server ready on 5000");
+});
+// app.listen(5000);
 
 
